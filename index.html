@@ -13,7 +13,7 @@
         }
         
         body {
-            background-color: #DDF4E7;
+            background: linear-gradient(135deg, #DDF4E7 0%, #c3e8d3 100%);
             color: #124170;
             min-height: 100vh;
             display: flex;
@@ -25,30 +25,42 @@
         
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             text-align: center;
         }
         
+        .header {
+            margin-bottom: 2.5rem;
+        }
+        
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
             color: #124170;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #26667F;
+            margin-bottom: 1.5rem;
         }
         
         p {
             font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         
         .buttons-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             margin-top: 30px;
-            
         }
         
         .btn {
@@ -56,41 +68,98 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 25px 20px;
-            background-color: #67C090;
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(145deg, #67C090, #5ab382);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 18px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            min-height: 120px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            padding: 20px;
         }
         
         .btn:hover {
-            background-color: #26667F;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(145deg, #26667F, #1f556e);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
         }
         
         .btn i {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: scale(1.1);
         }
         
         .btn span {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
+            text-align: center;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #26667F;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: #1a4d63;
+            transform: translateY(-3px);
         }
         
         footer {
-            margin-top: 50px;
+            margin-top: 60px;
             color: #26667F;
             font-size: 0.9rem;
+            text-align: center;
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .buttons-container {
-                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 150px;
+                height: 150px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .buttons-container {
+                gap: 12px;
+            }
+            
+            .btn {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .btn i {
+                font-size: 2.5rem;
+            }
+            
+            .btn span {
+                font-size: 1.1rem;
             }
             
             h1 {
@@ -102,27 +171,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Viajes Virtuales</h1>
-        <p>Explora destinos increíbles desde la comodidad de tu hogar con una experiencia digital e inmersiva que recrea destinos y lugares de interés, permitiendo a los usuarios explorar sin necesidad de desplazarse físicamente.</p>
-     <h2><a href="nosotros.html" class="button-container">nosotros<a></h2>
+        <div class="header">
+            <h1>Viajes Virtuales</h1>
+            <div class="subtitle">Descubre el mundo desde tu hogar</div>
+            <p>Explora destinos increíbles con nuestra experiencia digital inmersiva que recrea lugares de interés alrededor del mundo, permitiéndote visitar estos maravillosos lugares sin necesidad de desplazarte físicamente.</p>
+        </div>
+        
+        <a href="nosotros.html" class="nav-link">Conoce más sobre nosotros</a>
+        
         <div class="buttons-container">
-            <a href="#" class="btn">
-                <i class="fas fa-home"></i>
-                <span>PAIS 1 </span>
+            <a href="japon.html" class="btn">
+                <i class="fas fa-mountain"></i>
+                <span>Japón</span>
             </a>
             
-            <a href="#" class="btn">
-                <i class="fas fa-info-circle"></i>
-                <span>PAIS 2</span>
+            <a href="italia.html" class="btn">
+                <i class="fas fa-utensils"></i>
+                <span>Italia</span>
             </a>
             
-            <a href="#" class="btn">
-                <i class="fas fa-briefcase"></i>
-                <span>PAIS 3</span>
+            <a href="mexico.html" class="btn">
+                <i class="fas fa-pepper-hot"></i>
+                <span>México</span>
             </a>
             
-            <a href="pais4.html" class="btn">
-              <i class="fa-solid fa-cloud"></i>
+            <a href="tailandia.html" class="btn">
+                <i class="fas fa-umbrella-beach"></i>
                 <span>Tailandia</span>
             </a>
         </div>
