@@ -4,7 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajes Virtuales</title>
-  <link href="styles.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #DDF4E7;
+            color: #124170;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #124170;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .buttons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 20px;
+            background-color: #67C090;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-height: 120px;
+        }
+        
+        .btn:hover {
+            background-color: #26667F;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .btn span {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        footer {
+            margin-top: 50px;
+            color: #26667F;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .buttons-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -39,7 +131,4 @@
     </footer>
 </body>
 </html>
-
-
-
 
