@@ -4,7 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panamá, puente del mundo <3. </title>
-    <link href="styles.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #E8F7FC;
+            color: #124170;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #000000;
+        }
+        
+        h2 {
+            color: #200F89;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        h3 {  
+            color: #28A03C;
+            margin: 1.5rem 0;
+            text-align: left;                       
+        }
+        h4 {  
+            color: #890F0F;
+            margin: 1.5rem 0;
+            text-align: left;                       
+        }        
+        .content {
+            text-align: left;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .image-container {
+            width: 100%;
+            margin: 25px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .prices-list, .places-list {
+            background-color: #f5f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .prices-list h3, .places-list h3 {
+            color: #26667F;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .duration {
+            background-color: #14B4B4;
+            color: black;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .btn-back {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #67C090;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .btn-back:hover {
+            background-color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        footer {
+            margin-top: 50px;
+            color: #26667F;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -64,4 +219,3 @@
     </footer>
 </body>
 </html>
-
